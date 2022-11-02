@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 /* Header */
@@ -11,6 +13,7 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar h1 {
@@ -42,9 +45,135 @@
 /* home sections */
 
 .home {
-  background-image: url(/assets/photos/IMG_3515.jpg);
-  padding-top: 42px;
+  background-image: url(/assets/photos/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+  background-size: cover; 
+  background-blend-mode: darken;
+  background-position: center;
+  background-color: rgb(71, 71, 71, 0.5);
+  height: 1080px;
   width: 100%;
-  height: 1000px;
-  margin-bottom: 1000px;
+}
+.homeText {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.home h1 {
+  font-size: 4.5rem;
+}
+
+
+/*About Section*/
+
+.aboutMe {
+  background-size: cover; 
+  background-blend-mode: darken;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMe h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: black;
+}
+
+.content {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content img {
+  border-radius: 0%;
+  height: 420px;
+}
+
+.aboutMeText {
+  margin-top: px;
+  margin-left: 10px;
+}
+
+.aboutMeText h1 {
+  padding-bottom: 10px;
+}
+
+.aboutMeText p {
+  max-width: 500px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+}
+
+.aboutMeText h2 {
+  text-align: center;
+}
+
+.aboutMeText ul {
+  margin-left: 25px;
+}
+
+/*My Work Section*/
+.myWork {
+  background-image: url(/assets/photos/markus-spiske-hvSr_CVecVI-unsplash.jpg);
+  background-size: cover; 
+  background-blend-mode: darken;
+  background-position: center;
+  background-color: rgb(71, 71, 71, 0.5);
+  min-height: 300px;
+  width: 100%;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+}
+
+.projectPreview {
+  background: white;
+  margin: 20px;
+  box-shadow: 2px 2px 5px;
+  max-width: 400px;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.projectInfo {
+  margin: 4px;
+
+}
+
+.projectInfo h4 {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+.projectInfo p {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+
+/*Contact Me Section*/
+.contactMe {
+  border: solid green 3px;
+  height: 400px;
+}
+
+/*Footer*/
+.footer {
+  border: solid purple 3px;
+  height: 150px;
 }
