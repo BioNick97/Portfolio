@@ -1,179 +1,369 @@
+/* Reset styles and global settings */
 * {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-
+  box-sizing: border-box;
 }
 
-/* Header */
-
-.navbar {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+html, body {
+  overflow-x: hidden;
 }
 
-.navbar h1 {
-  padding-left: 6px;
-  margin-top: 7px;
+/* Container styling */
+.container {
+  padding: 10px 10%;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navbar li {
-  list-style-type: none;
-}
-
-.navbar a {
-  float: left;
-  padding: 12px 13px;
-  text-decoration: none;
-  text-align: center;
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
   color: black;
 }
 
-.navbar a:hover {
-  background-color: gold;
-}
-
-/* home sections */
-
-.home {
-  background-image: url(/assets/photos/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+/* Header styles */
+#home {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/photos/homepage.jpg);
   background-size: cover; 
   background-blend-mode: darken;
   background-position: center;
   background-color: rgb(71, 71, 71, 0.5);
-  height: 1080px;
+}
+
+.logo {
+  height: 100px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .fas {
+  display: none;
+}
+
+.headerContent span {
+  color: rgba(1, 49, 167, 255);
+}
+
+.headerContent h1 {
+  font-size: 30px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgba(1, 49, 167, 255);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: .5s;
+}
+
+nav ul li a:hover::after {
   width: 100%;
 }
-.homeText {
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.headerText {
+  margin-top: 20%;
+  font-size: 30px;
   color: white;
 }
 
-.home h1 {
-  font-size: 4.5rem;
+.headerText h1 {
+  margin-top: 20px;
+  font-size: 60px;
 }
 
+/* About section styles */
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
 
-/*About Section*/
-
-.aboutMe {
-  background-size: cover; 
-  background-blend-mode: darken;
-  background-position: center;
-  width: 100%;
+.row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.aboutMe h1 {
-  font-size: 3rem;
-  text-align: center;
-  color: black;
+.aboutImg {
+  flex-basis: 35%;
 }
 
-.content {
-  padding: 10px;
+.aboutImg img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.aboutText {
+  flex-basis: 60%;
+}
+
+.tab-titles {
   display: flex;
-  justify-content: space-evenly;
+  margin: 20px 0 40px;
 }
 
-.content img {
-  border-radius: 0%;
-  height: 420px;
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
 }
 
-.aboutMeText {
-  margin-top: px;
-  margin-left: 10px;
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgba(1, 49, 167, 255);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
 }
 
-.aboutMeText h1 {
-  padding-bottom: 10px;
+.tab-links.active-link::after {
+  width: 50%;
 }
 
-.aboutMeText p {
-  max-width: 500px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-
+.space-between {
+  margin-bottom: 20px; /* Adjust the value to control the amount of space */
 }
 
-.aboutMeText h2 {
-  text-align: center;
+.tab-content ul {
+  margin-left: 20px; /* Adjust the value based on your preference for indentation */
 }
 
-.aboutMeText ul {
-  margin-left: 25px;
+/* Contact Me section styles */
+.contact-left {
+  flex-basis: 35%;
 }
 
-/*My Work Section*/
-.myWork {
-  background-image: url(/assets/photos/markus-spiske-hvSr_CVecVI-unsplash.jpg);
-  background-size: cover; 
-  background-blend-mode: darken;
-  background-position: center;
-  background-color: rgb(71, 71, 71, 0.5);
-  min-height: 300px;
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #0131a7;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-right form {
   width: 100%;
 }
 
-.projectGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
-  row-gap: 40px;
-}
-
-.projectPreview {
-  background: white;
-  margin: 20px;
-  box-shadow: 2px 2px 5px;
-  max-width: 400px;
-}
-
-.thumbnail {
+form input,
+form textarea {
   width: 100%;
+  border: 0;
+  outline: none;
+  background: #40444e;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
 }
 
-.projectInfo {
-  margin: 4px;
-
+.social-icons {
+  margin-top: 30px;
 }
 
-.projectInfo h4 {
-  margin-top: 0;
-  font-size: 14px;
-  line-height: 20px;
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #40444e;
+  display: inline-block;
+  transition: .5s;
 }
 
-
-.projectInfo p {
-  font-size: 12px;
-  color: rgb(96, 96, 96);
+.social-icons a:hover {
+  color: #0131a7;
+  transform: translateY(-5px);
 }
 
-
-/*Contact Me Section*/
-.contactMe {
-  border: solid green 3px;
-  height: 400px;
+.btn.btn2 {
+  display: inline-block;
+  background: #0131a7;
+  color: white;
 }
 
-/*Footer*/
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Footer styles */
 .footer {
-  border: solid purple 3px;
-  height: 150px;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #40444e;
+  font-weight: 300;
+  margin-top: 20px;
+  color: white;
 }
+
+/* Styles for myWork section */
+#myWork {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.work {
+  width: 30%;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.work h3 {
+  text-align: center;
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #0131a7; /* Use a color that contrasts well with your background */
+  margin-bottom: 10px; /* Add some bottom margin for separation */
+  text-transform: uppercase; /* Convert text to uppercase for emphasis */
+  font-weight: bold; /* Increase font weight for emphasis */
+  letter-spacing: 2px; /* Add letter spacing for clarity */
+}
+.work:hover {
+  transform: scale(1.05);
+}
+
+.work img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work .layer {
+  display: none;
+}
+
+
+
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Ensure proper visibility of text */
+.layer h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Adjust the max height and add scrolling for longer descriptions */
+.layer p {
+  color: #666;
+  max-height: 150px; /* Adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Adjust the number of lines to display */
+  -webkit-box-orient: vertical;
+}
+
+.layer a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.layer a:hover {
+  background-color: #555;
+}
+/* Additional media query for small screens */
+@media only screen and (max-width: 

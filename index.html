@@ -8,77 +8,205 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/df9b5b9e38.js" crossorigin="anonymous"></script>
   <title>Nicolas Hernandez</title>
 </head>
 <body>
-  <nav class="navbar">
-    <h1>Nick</h1>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#myWork">My Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  
-  <section class="home">
-    <div class="homeText">
-      <h1>Nicolas Hernandez</h1>
-      <p>Front-End Developer</p>
+  <section id="home"> 
+    <div class="container">   
+      <div class="headerContent">
+        <nav>
+          <img src="/assets/photos/page0logo.png" class="logo">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#myWork">Portfolio</a></li>
+            <li><a href="#contactMe">Contact</a></li>
+            <i class="fas fa-circle-xmark"></i>
+          </ul>
+          <i class="fas fa-bars"></i>
+        </nav>
+        <div class="headerText">
+          <h1>Nick <span>Hernandez</span></h1>
+          <p>Developer</p>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="aboutMe">
-    <div class="content">
-      <img src="/assets/photos/IMG_3076.jpg" alt="Picture of me">
-      <div class="aboutMeText">
-        <h1>About Me</h1>
 
-        <p>
-          Hello, I am Nicolas Hernandez.
-          I am a self tought front end developer, and currently reside in Florida.
-          I started learning HTML, CSS and Javascript in April of 2022, and found myself wondering why I hadn't started sooner.
+<!-- ------------------About---------------- -->
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="aboutImg">
+        <img src="/assets/photos/Selfie.jpg" alt="Picture of me">
+      </div>
+      <div class="aboutText">
+        <h1 class="sub-title">About Me</h1>
+        <p>Greetings! I'm Nicolas Hernandez, a dedicated Computer Science student based in Kissimmee, Florida, currently pursuing my B.A. at the University of Central Florida. 
+          With an A.A. in Information Technology from Valencia College, I bring a solid foundation in computer science.
+          My professional journey includes roles at Walmart Distribution Center and Nemours Children's Hospital, where I've honed skills in systems support, equipment maintenance, and inventory management.
+          Currently, I serve as a System Admin/Developer Operations at Hybrid Enterprise LLC., contributing to the management of crucial information systems for Veteran Affairs.
+          Proficient in Java, JavaScript, HTML/CSS, and with a knack for problem-solving, I'm eager to leverage my skills in software development and technical support. 
+          Let's connect and explore exciting opportunities together!
         </p>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JaveScript</li>
-        </ul>
+        <nav>
+          <div class="tab-titles">
+            <p class="tab-links" onclick="openTab('Skills')">Skills</p>
+            <p class="tab-links" onclick="openTab('Experience')">Experience</p>
+            <p class="tab-links" onclick="openTab('Education')">Education</p>
+          </div>
+        </nav>
+
+        <div id="Skills" class="tab-content">
+          <h2>Skills</h2>
+          <ul>
+            <li>Programming Languages:
+              <ul>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>HTML and CSS</li>
+              </ul>
+            </li>
+            <li>Software Development</li>
+            <li>Technical Support</li>
+            <li>Problem Solving</li>
+            <li>Microsoft Office Suite:
+              <ul>
+                <li>Word</li>
+                <li>Excel</li>
+                <li>Outlook</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+
+        <div id="Experience" class="tab-content" style="display:none;">
+          <h2>Experience</h2>
+          <h3>Walmart Distribution Center (2019-2021)</h3>
+          <p class="space-between"><strong>Systems Support Analyst<br></strong></p>
+
+          <h3>Nemours Children's Hospital (2021-2023)</h3>
+          <p class="space-between"><strong>Equipment Technician<br></strong></p>
+
+          <h3>Hybrid Enterprise LLC. (2023-current)</h3>
+          <p class="space-between"><strong>System Admin/Developer Operations<br></strong></p>
+        </div>
+
+        <div id="Education" class="tab-content" style="display:none;">
+          <h2>Education</h2>
+          
+          <h3 >University of Central Florida, Orlando, Florida</h3>
+          <p class="space-between"><strong>B.A. in Computer Science (Expected Graduation: 2025)</strong></p>
+          
+          <h3>Valencia College, Kissimmee, Florida</h3>
+          <p class="space-between"><strong>A.A. in Information Technology (2020)</strong></p>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- --------------------Portfolio------------------ -->
+
+<!-- Portfolio Section -->
+<section id="myWork">
+  <div class="container">
+    <h1 class="sub-title">My Works</h1>
+    <ul class="work-list">
+      <!-- Project 1: Instructions -->
+      <li class="work" onclick="openModal(this)">
+        <img src="/assets/photos/Instructions.jpg" alt="">
+        <h3>Instructions</h3>
+
+        <div class="layer">
+          <h3>Instructions</h3>
+
+          <p>This detailed guide walks you through assembling your own computer, offering step-by-step instructions and safety tips for both beginners and tech enthusiasts. It includes a curated list of components for a moderately priced gaming PC, highlighting their importance and functionalities. From installing the CPU to cable management and system testing, this guide ensures a rewarding and successful computer-building experience.
+          </p>
+          <a href="/assets/Projects/How to Assemble Your Own Computer.pdf" download>Download Instructions</a>
+        </div>
+      </li>
+
+      <!-- Project 2: Resume and Cover Letter Combo -->
+      <li class="work" onclick="openModal(this)">
+        <img src="/assets/photos/Resumer and CoverLetter.jpg" alt="">
+        <h3>Resume and Cover Letter</h3>
+
+        <div class="layer">
+          <h3>Resume and Cover Letter</h3>
+
+          <p>This Project is a Resume and Cover letter combo, for an internship at Phoenix Logistics, LLC.</p>
+          <a href="/assets/Projects/Cover Letter Assignment.pdf" download>Cover Letter</a>
+          <a href="/assets/Resume assignment.pdf" download>Resume</a>
+        </div>
+      </li>
+
+      <!-- Project 3: Research Proposal -->
+      <li class="work" onclick="openModal(this)">
+        <img src="/assets/photos/Proposal.jpg" alt="">
+        <h3>Research Proposal</h3>
+
+        <div class="layer">
+          <h3>Research Proposal</h3>
+
+          <p>This document outlines the research project "WhisperList," aiming to create a mobile application that leverages voice recognition technology for enhanced task management. Addressing the challenges of information overload, the project focuses on user-friendly design, security implementation, and comprehensive testing over a five-month timeline. With a strategic budget allocation of $1500, the project aims to contribute valuable insights to mobile app development while providing practical solutions for efficient task management within the UCF community.
+          </p>
+          <a href="/assets/Projects/Project_#3_Proposal.pdf" download>Download Research Proposal</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+
+    <!-- --------------------Contact-me------------------ -->
+
+  <section id="contactMe">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i>Nicolas.Hernandez144@outlook.com</p>
+          <div class="social-icons">
+            <a href="https://github.com/BioNick97" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-hernandez-09a217132/" target="_blank"><i class="fa-brands fa-linkedin"></i></i></a>
+          </div>
+          <a href="/assets/Resume/Nicolas Hernandez 2022.docx" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name"
+            required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
-  <section class="myWork">
-    
-    <div class="projectGrid">
-
-      <div class="projectPreview">
-
-        <img class="thumbnail" src="/assets/photos/Cruise-Countdown.png"> 
-        
-        <div class="projectInfo">
-          <h4>Cruise Countdown</h4>
-          <p>This is a simple project that just counts down the days till A cruise I have coming up</p>
-        </div>
-      
-      </div>
-      
-      <div class="projectPreview">
-
-        <img class="thumbnail" src="/assets/photos/Cruise-Countdown.png"> 
-      
-        <div class="projectInfo">
-          <h4>Cruise Countdown</h4>
-          <p>This is a simple project that just counts down the days till A cruise I have coming up</p>
-        </div>
-    
-       </div>
-    </div> 
-         
+  <section class="footer">
+    <p>Copyright © Nicolas Hernandez </p>
   </section>
-  <section class="contactMe">contact me</section>
-  <section class="footer">footer</section>
 
 
   <script src="/assets/scripts/script.js"></script>
+  
 </body>
 </html>
